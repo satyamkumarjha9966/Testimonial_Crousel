@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonial Crousel</title>
+    <script src="https://kit.fontawesome.com/ae2012805a.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(33, 12, 126);
+        }
+
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: 5rem;
+        }
+
+        h3{
+            color: white;
+            font-size: 2rem;
+            padding-bottom: .7rem;
+            letter-spacing: 1px;
+        }
+
+        h5{
+            color: white;
+            font-size: 1rem;
+            padding-bottom: 2rem;
+        }
+
+        .cart{
+            background-color: white;
+            width: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            text-align: left;
+            padding: 30px;
+            border-radius: 4px;
+            box-shadow: 0px 0px 20px white;
+            position: relative;
+        }
+
+        .imgCard{
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .review{
+            padding-bottom: 1rem;
+            padding-top: .3rem;
+        }
+
+        .star{
+            color: red;
+            font-size: .8rem;
+        }
+
+        h4{
+            font-size: 1.5rem;
+        }
+
+        p{
+            font-size: 1.2rem;
+
+        }
+
+        .nexteBtn, .preBtn{
+            color: red;
+            font-size: 1.8rem;
+            width: 45px;
+            height: 45px;
+            line-height: 45px;
+            border-radius: 50%;
+            text-align: center;
+            transition: all .3s ease;
+            cursor: pointer;
+        }
+
+        .preBtn{
+            position: absolute;
+            top: 48%;
+            right: 83%;
+
+        }
+
+        .nexteBtn{
+            position: absolute;
+            top: 48%;
+            right: 13%;
+        }
+
+        .btn:hover{
+            background-color: red;
+            color: white;
+        }
+
+        @media only screen and (max-width: 624px){
+            .cart{
+                width: 90%;
+                padding: 15px;
+            }
+        }
+
+        .cart{
+            display: none;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>What Our Clients Says</h3>
+        <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, magnam!</h5>
+
+
+        <div class="cart">
+            <img src="https://picsum.photos/id/229/100/100" id="customerImg" class="imgCard" alt="">
+            <h4 id="customerName">Shivam</h4>
+            <div class="review">
+                <span class="star">
+                    <i class="fas fa-star"></i>
+                </span>
+                <span class="star">
+                    <i class="fas fa-star"></i>
+                </span>
+                <span class="star">
+                    <i class="fas fa-star"></i>
+                </span>
+                <span class="star">
+                    <i class="fas fa-star"></i>
+                </span>
+                <span class="star">
+                    <i class="fas fa-star-half"></i>
+                </span>
+
+                <p class="customerText" id="customerText">1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, nulla voluptates recusandae molestiae numquam, vel in natus soluta sit praesentium ea!</p>
+            </div>
+        </div>
+        <div class="cart">
+            <img src="https://picsum.photos/id/230/100/100" id="customerImg" class="imgCard" alt="">
+            <h4 id="customerName">Sundaram</h4>
+            <div class="review">
+                <span class="star">
+                    <i class="fas fa-star"></i>
+                </span>
+                <span class="star">
+                    <i class="fas fa-star"></i>
+                </span>
+                <span class="star">
+                    <i class="fas fa-star"></i>
+                </span>
+                <span class="star">
+                    <i class="fas fa-star"></i>
+                </span>
+                <span class="star">
+                    <i class="fas fa-star-half"></i>
+                </span>
+
+                <p class="customerText" id="customerText">2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, nulla voluptates recusandae molestiae numquam, vel in natus soluta sit praesentium ea! Lorem ipsum dolor sit amet.</p>
+            </div>
+        </div>
+        <div class="cart">
+            <img src="https://picsum.photos/id/237/100/100" id="customerImg" class="imgCard" alt="">
+            <h4 id="customerName">Kajal</h4>
+            <div class="review">
+                <span class="star">
+                    <i class="fas fa-star"></i>
+                </span>
+                <span class="star">
+                    <i class="fas fa-star"></i>
+                </span>
+                <span class="star">
+                    <i class="fas fa-star"></i>
+                </span>
+                <span class="star">
+                    <i class="fas fa-star"></i>
+                </span>
+                <span class="star">
+                    <i class="fas fa-star-half"></i>
+                </span>
+
+                <p class="customerText" id="customerText">3. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, nulla voluptates recusandae molestiae numquam, vel in natus soluta sit praesentium ea! Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+        <div class="cart">
+            <img src="https://picsum.photos/id/233/100/100" id="customerImg" class="imgCard" alt="">
+            <h4 id="customerName">Satyam</h4>
+            <div class="review">
+                <span class="star">
+                    <i class="fas fa-star"></i>
+                </span>
+                <span class="star">
+                    <i class="fas fa-star"></i>
+                </span>
+                <span class="star">
+                    <i class="fas fa-star"></i>
+                </span>
+                <span class="star">
+                    <i class="fas fa-star"></i>
+                </span>
+                <span class="star">
+                    <i class="fas fa-star-half"></i>
+                </span>
+
+                <p class="customerText" id="customerText">4. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, nulla voluptates recusandae molestiae numquam, vel in natus soluta sit praesentium ea! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid, laboriosam.</p>
+            </div>
+        </div>
+
+
+        <button class="btn preBtn" id="preBtn" onclick="controller(-1)"><i class="fas fa-long-arrow-alt-left"></i></button>
+        <button class="btn nexteBtn" id="nextBtn" onclick="controller(+1)"><i class="fas fa-long-arrow-alt-right"></i></button>
+    </div>
+
+    <script>
+        let flag = 0;
+
+        function controller(x) {
+            flag = flag + x;
+            slideshow(flag)
+        }
+
+        slideshow(flag)
+
+        function slideshow(num) {
+            let slides = document.getElementsByClassName("cart");
+            console.log(slides);
+            
+            if (num == slides.length) {
+                num = 0;
+                flag = 0;
+            }
+
+            if (num < 0) {
+                num = slides.length - 1;
+                flag = slides.length - 1;
+            }
+            
+            for (const y of slides) {
+                y.style.display = "none"
+            }
+
+            slides[num].style.display = "block";
+            slides[num].style.transition = "5s"
+            
+
+        }
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+<!-- // (function () {
+    //    const customerImg = document.getElementById("customerImg");
+    //    const customerName = document.getElementById("customerName");
+    //    const customerText = document.getElementById("customerText");
+
+    //    const btn = document.querySelectorAll(".btn");
+
+    //    let index = 0;
+    //    const Customers = []
+
+    //    function customer(img, name, text) {
+    //     this.img = img
+    //     this.name = name
+    //     this.text = text
+    //    }
+
+    //    function createCustomer(img, name, text) {
+    //     let img
+    //    }
+    // })() -->
